@@ -41,7 +41,10 @@ public abstract class AbstractBasePage {
      * @param component
      */
     public void navigateTo(String component) {
+        BrowserUtilities.wait(3);
         String locator = "//a[text()='" + component + "']";
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator))).click();
+        BrowserUtilities.wait(3);
+
     }
 }

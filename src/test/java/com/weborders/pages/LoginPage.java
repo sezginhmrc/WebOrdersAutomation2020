@@ -21,6 +21,7 @@ public class LoginPage extends AbstractBasePage {
         String passwordValue = ConfigurationReader.getProperty("password");
         userName.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
+        BrowserUtilities.wait(3);
     }
 
     public void login(String usernameValue, String passwordValue) {

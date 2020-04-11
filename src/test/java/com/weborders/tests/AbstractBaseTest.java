@@ -47,7 +47,7 @@ public abstract class AbstractBaseTest {
     @Parameters ("browser")
     public void setup(@Optional String browser) {
         System.out.println("Browser type = " +browser);
-        driver = Driver.getDriver();
+        driver = browser ==null ? Driver.getDriver() : Driver.getDriver(browser);
         driver.get(ConfigurationReader.getProperty("url"));
         driver.manage().window().maximize();
     }
