@@ -7,9 +7,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
+    //singleton driver (only one driver)
 
     //same for everyone
     private static ThreadLocal <WebDriver> driverPool= new ThreadLocal<>() ;
+    // threadlocal copy instance of varialbe
+    // everybrowser will get their own copy of driver
 
     //so no one can create object of Driver class
     //everyone should call static getter method instead
@@ -92,7 +95,7 @@ public class Driver {
     public static void closeDriver() {
         if (driverPool != null) {
             driverPool.get().quit();
-            driverPool = null;
+            driverPool.remove();
         }
     }
 }
