@@ -117,7 +117,6 @@ public class BrowserUtilities {
    * target window based on page title
    * @param  title of the window to switch
    * */
-
     public static void switchWindow(String title){
         Set<String> windowHandles = Driver.getDriver().getWindowHandles();
         for(String window : windowHandles){
