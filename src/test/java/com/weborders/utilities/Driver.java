@@ -23,7 +23,7 @@ public class Driver {
     /**synchronized makes method thread safe. It ensures that only 1 thread can use it at the time.
      *
      * Thread safety reduces performance but it makes everything safe.
-     *
+     * synchronized prevent the crashes.
      * @return
      */
     public synchronized static WebDriver getDriver() {
