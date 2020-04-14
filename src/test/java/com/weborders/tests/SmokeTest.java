@@ -30,3 +30,10 @@ public class SmokeTest extends AbstractBaseTest {
         };
     }
 }
+
+// how to do parallel testing
+// what makes exetuable in parallel ;
+// parallel = true
+// driver class providing multiple objects in run time and make the thread safe
+// every test getting their own copy of driver
+// just beacuse we did threadLocal driver pool.
